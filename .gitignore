@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+# Dependency directories
+node_modules/
+
+# Distribution directory
+dist/
+
+# IntelliJ project files
+.idea/
+*.iml
+*.xml
+out
+gen
