@@ -1,0 +1,27 @@
+.custom__navbar {
+  .navbar {
+    border-radius: 0;
+    border-top: 6px solid #FD5B78;
+    margin-bottom: 0px;
+    font-size: 25px;
+
+    .container {
+      padding: 0px;
+      margin: 0 15px;
+
+      .navbar-header > .navbar-brand {
+        font-size: 30px;
+        color: #222b33;
+      }
+
+      .navbar-nav {
+        li > a  > a{
+          color: #FD5B78;
+        }
+      }
+
+
+    }
+  }
+
+}

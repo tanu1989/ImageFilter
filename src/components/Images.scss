@@ -1,0 +1,13 @@
+.images__grid {
+
+  margin-left: 100px;
+  margin-top: 50px;
+
+    .img-responsive {
+      max-height: 400px;
+      max-width: 400px;
+      border: 10px solid white;
+      display: inline;
+    }
+
+}
