@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image} from 'react-bootstrap';
+import ImageZoomModal from './ImageZoomModal';
 
 let imgUrls = [
     'https://source.unsplash.com/3Z70SDuYs5g/600x600',
@@ -18,22 +19,50 @@ let imgUrls = [
 
 class Images extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            showModal: false,
+            img:''
+        }
+    }
+
+    onModalClose = () => {
+        this.setState(() => ({
+            showModal: false
+        }))
+    };
+
+    handleImageZoom =(url) => {
+        console.log(url);
+        this.setState(() => ({
+            showModal: true,
+            img: url
+        }))
+    };
+
+
     renderImageThumbs = () => {
         return imgUrls.map((url) => {
-            return <Image src={url} responsive/>
-
+            return (<div className="tint" onClick={() => {this.handleImageZoom(url)}}>
+                        <Image src={url} responsive/>
+                    </div>
+                    )
         })
     };
 
     render() {
 
         const getImages = this.renderImageThumbs();
+        const {showModal, img} = this.state;
 
 
         return (
             <div className="images__grid">
                 {getImages}
+                {showModal && <ImageZoomModal url={img} show={showModal} onHide={this.onModalClose}/>}
             </div>
+
         )
     }
 }

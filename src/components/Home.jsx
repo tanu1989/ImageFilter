@@ -15,7 +15,7 @@ class Home extends React.Component {
                         </Navbar.Brand>
                     </Navbar.Header>
                     <Nav>
-                        <NavItem eventKey={1}><Link to='/'>Home</Link></NavItem>
+                        <NavItem eventKey={1}><Link to='/filter'>Home</Link></NavItem>
                         <NavItem eventKey={2}><Link to='/images'>Images</Link></NavItem>
                     </Nav>
                 </Navbar>
